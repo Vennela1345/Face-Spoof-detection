@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 40px 60px;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #1a237e;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        strong {
+            font-size: 24px;
+            color: #0d47a1;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #1a73e8;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #0c56c1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Detection Result:</h2>
+        <p><strong>{{ result }}</strong></p>
+        <a href="/login">Logout and Recheck</a>
+    </div>
+</body>
+</html>

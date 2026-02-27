@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Options</title>
+    <style>
+        body { font-family: Arial; text-align: center; background: #f0f0f0; }
+        h2 { margin-top: 30px; }
+        .btn { padding: 15px 25px; margin: 10px; border: none; border-radius: 10px; background: #333; color: #fff; cursor: pointer; }
+        .upload-box { margin-top: 20px; background: #fff; padding: 20px; border-radius: 15px; display: inline-block; }
+    </style>
+</head>
+<body>
+
+<h2>Select Detection Mode</h2>
+
+<a href="/detect/live/"><button class="btn">Live Detection</button></a>
+
+<div class="upload-box">
+    <form action="/detect/image/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image" accept="image/*" required>
+        <button class="btn" type="submit">Detect from Image</button>
+    </form>
+</div>
+
+<div class="upload-box">
+    <form action="/detect/video/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="video" accept="video/*" required>
+        <button class="btn" type="submit">Detect from Video</button>
+    </form>
+</div>
+
+<br><br>
+<a href="/logout/">Logout</a>
+
+</body>
+</html>
